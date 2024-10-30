@@ -1,0 +1,124 @@
+/* estilos globais */
+* {
+ margin: 0;
+ padding: 0;
+ border: none;
+}
+
+button {
+  padding: 5px;
+  border: none;
+  width: 96px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  background-color: rgb(137, 157, 177);
+  color: white;
+}
+/* Estilo de cabeçalho */
+.container-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title-container button {
+  font-size: 48px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 60px;
+}
+
+.title-container p {
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  gap: 4px;
+}
+
+/* Botões de Gênero */
+.genre-buttons{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px
+}
+
+.genre-button {
+  height: 160px;
+  width: 140px;
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(2 ,1fr);
+  gap: 2px;
+}
+
+.img-container img {
+  margin: 2px;
+  border-radius: 8px;
+  width: 60px;
+  height: auto;
+  object-fit: cover;
+}
+
+.genre-button:hover {
+  height: 180px;
+  width: 160px;
+  gap: 4px;
+  flex-direction: column;
+  transform: scale(1.1, 1.1);
+  transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.img-container:hover img {
+  filter: brightness(120%);
+  cursor: pointer;
+  transition: filter 0.3s ease-in-out, height 0.3s ease-in-out, width 0.3s ease-in-out;;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  z-index: 1;
+  width: 70px;
+}
+
+/* Estilo do container principal */
+.container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.start button {
+  background-color: rgb(230, 25, 75);
+  color: white;
+  gap: 16px;
+}
