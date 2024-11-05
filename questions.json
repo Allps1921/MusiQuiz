@@ -1,0 +1,210 @@
+{
+  "pop": [
+    {
+      "pergunta": "Qual artista pop é conhecido como a 'Rainha do Pop'?",
+      "opcoes": [
+        "Madonna",
+        "Beyoncé",
+        "Lady Gaga",
+        "Rihanna"
+      ],
+      "resposta": "Madonna"
+    },
+    {
+      "pergunta": "Qual álbum de Michael Jackson se tornou o mais vendido de todos os tempos?",
+      "opcoes": [
+        "Off the Wall",
+        "Thriller",
+        "Bad",
+        "Dangerous"
+      ],
+      "resposta": "Thriller"
+    },
+    {
+      "pergunta": "Quem cantou a famosa música 'Like a Prayer'?",
+      "opcoes": [
+        "Madonna",
+        "Whitney Houston",
+        "Britney Spears",
+        "Mariah Carey"
+      ],
+      "resposta": "Madonna"
+    },
+    {
+      "pergunta": "Qual cantora lançou o álbum '1989' em 2014?",
+      "opcoes": [
+        "Ariana Grande",
+        "Taylor Swift",
+        "Katy Perry",
+        "Miley Cyrus"
+      ],
+      "resposta": "Taylor Swift"
+    },
+    {
+      "pergunta": "Qual foi o primeiro single de sucesso de Justin Bieber?",
+      "opcoes": [
+        "Baby",
+        "One Time",
+        "Sorry",
+        "Love Yourself"
+      ],
+      "resposta": "One Time"
+    }
+  ],
+  "rock": [
+    {
+      "pergunta": "Qual banda britânica lançou o álbum 'The Dark Side of the Moon'?",
+      "opcoes": [
+        "Led Zeppelin",
+        "Pink Floyd",
+        "Queen",
+        "The Beatles"
+      ],
+      "resposta": "Pink Floyd"
+    },
+    {
+      "pergunta": "Quem foi o vocalista da banda Nirvana?",
+      "opcoes": [
+        "Eddie Vedder",
+        "Kurt Cobain",
+        "Chris Cornell",
+        "Dave Grohl"
+      ],
+      "resposta": "Kurt Cobain"
+    },
+    {
+      "pergunta": "Em que década o rock and roll começou a ganhar popularidade?",
+      "opcoes": [
+        "1940",
+        "1950",
+        "1960",
+        "1970"
+      ],
+      "resposta": "1950"
+    },
+    {
+      "pergunta": "Qual banda é conhecida pelo hit 'Stairway to Heaven'?",
+      "opcoes": [
+        "AC/DC",
+        "Led Zeppelin",
+        "Guns N' Roses",
+        "Aerosmith"
+      ],
+      "resposta": "Led Zeppelin"
+    },
+    {
+      "pergunta": "Qual artista é famoso pelo seu papel como guitarrista do Queen?",
+      "opcoes": [
+        "Jimi Hendrix",
+        "Eric Clapton",
+        "Brian May",
+        "Slash"
+      ],
+      "resposta": "Brian May"
+    }
+  ],
+  "hiphop": [
+    {
+      "pergunta": "Qual rapper é conhecido como o 'Rei de Nova York' e lançou o álbum 'Ready to Die'?",
+      "opcoes": [
+        "Nas",
+        "Jay-Z",
+        "The Notorious B.I.G.",
+        "Tupac Shakur"
+      ],
+      "resposta": "The Notorious B.I.G."
+    },
+    {
+      "pergunta": "Qual artista lançou o álbum 'To Pimp a Butterfly' em 2015?",
+      "opcoes": [
+        "Drake",
+        "Kanye West",
+        "Kendrick Lamar",
+        "J. Cole"
+      ],
+      "resposta": "Kendrick Lamar"
+    },
+    {
+      "pergunta": "Qual música de Eminem ficou famosa pelo verso 'I'm Slim Shady, yes I'm the real Shady'?",
+      "opcoes": [
+        "Without Me",
+        "Lose Yourself",
+        "The Real Slim Shady",
+        "Stan"
+      ],
+      "resposta": "The Real Slim Shady"
+    },
+    {
+      "pergunta": "Quem fundou a gravadora Roc-A-Fella Records?",
+      "opcoes": [
+        "Dr. Dre",
+        "Puff Daddy",
+        "Jay-Z",
+        "Nas"
+      ],
+      "resposta": "Jay-Z"
+    },
+    {
+      "pergunta": "Em que ano foi lançado o álbum 'Illmatic' de Nas?",
+      "opcoes": [
+        "1990",
+        "1994",
+        "1998",
+        "2000"
+      ],
+      "resposta": "1994"
+    }
+  ],
+  "eletronica": [
+    {
+      "pergunta": "Qual DJ e produtor sueco lançou o hit 'Levels'?",
+      "opcoes": [
+        "David Guetta",
+        "Calvin Harris",
+        "Avicii",
+        "Tiësto"
+      ],
+      "resposta": "Avicii"
+    },
+    {
+      "pergunta": "Qual DJ ficou famoso pelo uso do mouse como parte de sua marca e identidade visual?",
+      "opcoes": [
+        "Deadmau5",
+        "Skrillex",
+        "Marshmello",
+        "Diplo"
+      ],
+      "resposta": "Deadmau5"
+    },
+    {
+      "pergunta": "Em qual cidade surgiu o gênero de música eletrônica conhecido como 'House'?",
+      "opcoes": [
+        "Berlim",
+        "Detroit",
+        "Nova Iorque",
+        "Chicago"
+      ],
+      "resposta": "Chicago"
+    },
+    {
+      "pergunta": "Qual álbum de Daft Punk ganhou o Grammy de Álbum do Ano em 2014?",
+      "opcoes": [
+        "Discovery",
+        "Homework",
+        "Random Access Memories",
+        "Human After All"
+      ],
+      "resposta": "Random Access Memories"
+    },
+    {
+      "pergunta": "Qual desses é um festival internacionalmente famoso de música eletrônica?",
+      "opcoes": [
+        "Lollapalooza",
+        "Coachella",
+        "Tomorrowland",
+        "Glastonbury"
+      ],
+      "resposta": "Tomorrowland"
+    }
+  ]
+}

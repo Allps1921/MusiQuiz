@@ -10,7 +10,7 @@
 <body>
   <header class="container-header">
     <div class="title-container">
-      <button id="tittle-button" type="button">Musi.Quiz</button>
+      <button id="title-button" class="title-button">Musi.Quiz</button>
       <p>Test your musical knowledge by answering questions about popular musicians.<br>
         Choice your favorite genre and proof your ability
       </p>
@@ -18,7 +18,19 @@
   </header>
 
   <main class="container-main">
-    <div class="genre-buttons">
+    <div class="start">
+      <button id="start-button" class="start-game button">Start Quiz</button>
+      <button id="stop-button" class="stop-game button hide">Stop Quiz  
+      </button>
+    </div>
+
+    <input type="text" class="username hide" id="username" placeholder="Insert your NickName">
+
+    <div class="enter-button start hide">
+      <button>Avançar</button>
+    </div>
+
+    <div class="genre-buttons hide">
       <button id="genre-rock" class="genre-button">
         <div class="img-container">
           <img class="img-container" src="/images/acdc.jpeg" alt="AC-DC"/>
@@ -43,7 +55,7 @@
           <img class="img-container" src="/images/paramore.jpeg" alt="Paramore"/>
           <img class="img-container" src="/images/metallica.jpeg" alt="AC-DC"/>
           <img class="img-container" src="/images/bring me the horizon.jpeg" alt="Bring The Horizon"/>
-        </div><span>Hip-Hop</span>
+        </div><span>Hip Hop</span>
       </button>
       <button id="genre-jazz" class="genre-button">
         <div class="img-container">
@@ -51,11 +63,12 @@
           <img class="img-container" src="/images/paramore.jpeg" alt="Paramore"/>
           <img class="img-container" src="/images/metallica.jpeg" alt="AC-DC"/>
           <img class="img-container" src="/images/bring me the horizon.jpeg" alt="Bring The Horizon"/>
-        </div><span>Jazz</span></button>
+        </div>
+        <span>Eletronica</span>
+      </button>
     </div>
-    <button id="start-button" class="start-game button">Start Quiz</button>
-    <button id="stop-button" class="stop-game button hide">Stop Quiz  
-    </button>
+    <div id="question-container" class="hide"></div>
+    <div id="answer-container" class="hide"></div>
 
   </main>
 

@@ -61,7 +61,7 @@ button {
 }
 
 .title-container p {
-  font-size: 24px;
+  font-size: 16x;
   font-weight: normal;
   text-align: center;
 }
@@ -144,6 +144,13 @@ main {
   padding: 10px;
 }
 
+.username {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  border: none;
+}
 .start {
   display: flex;
   padding: 16px;
@@ -152,14 +159,11 @@ main {
   align-items: center;
 }
 
-.start-game button {
+.start button {
   background-color: #e6194b;
   color: white;
 }
 
-.stop-game button {
-  background-color: #008CBA;
-}
 
 .start-game:hover {
   transform: scale(1.1);
@@ -172,7 +176,7 @@ main {
 }
 
 /* Elementos para ativação no script */
-hide {
+.hide {
   display: none;
 }
 
