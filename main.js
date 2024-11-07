@@ -167,6 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
       questionContainer.classList.add('hide')
       answerContainer.classList.add('hide')
       scoreContainer.classList.remove('hide')
+
+      startButton.classList.remove('hide')
+      startButton.innerText = 'Jogar Novamente'
     }
   }
 })
