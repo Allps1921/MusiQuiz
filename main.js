@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let nickName
   let questions = [];
   let currentQuestionIndex = 0;
-  let score = 50000
+  let score = 30000
   let timer // armazena o tempo
 
 
@@ -56,8 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
       button.classList.remove('unselected')
 
       selectedGenre = button.getAttribute('id')
-      alert('Genero ' + selectedGenre + ' selecionado')
-
       loadQuestions()
     })
   })
@@ -124,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Iniciar o Timer
     function startScoreTimer() {
       timer = setInterval(() => {
-        score -= 1
+        score -= 100
         if (score <= 0) {
           score = 0
           clearInterval(timer)
@@ -142,14 +140,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const correctAnswer = questions[currentQuestionIndex].resposta
 
       if (selectedOption === correctAnswer) {
-        score + 1000
+        score += 3000
         console.log('Resposta correta!')
       } else {
-        score - 3000
+        score -= 5000
         console.log('Resposta errada!')
       }
 
       nextQuestion()
+      console.log(score)
     }
 
     function nextQuestion() {
@@ -166,6 +165,13 @@ document.addEventListener('DOMContentLoaded', () => {
       clearTimeout(timer)
       questionContainer.classList.add('hide')
       answerContainer.classList.add('hide')
+      if (score >= 25000) {
+        scoreContainer.innerText = 'Parabéns, ' + nickName + '! Sua pontuação foi' + score + '.'
+      } else if (score >= 15000) {
+        scoreContainer.innerText = 'Você conseguiu, ' + nickName + '! Sua pontuação foi' + score + '.'
+      } else {
+        scoreContainer.innerText = 'Que pena, ' + nickName + '! Sua pontuação foi' + score + '.'
+      }
       scoreContainer.classList.remove('hide')
 
       startButton.classList.remove('hide')

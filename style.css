@@ -64,6 +64,9 @@ button {
   font-size: 16x;
   font-weight: normal;
   text-align: center;
+  margin-top: 16px;
+  text-align: center;
+  color: #3f3f3f;
 }
 
 /* Botões de Gênero */
@@ -153,16 +156,15 @@ main {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 8px;
   border: none;
-  width: 200px;
+  width: 350px;
   margin-bottom: 16px;
   padding: 8px;
   transition: background-color 0.5s ease-in-out;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   outline: none;
   border-radius: 8px;
-  font-family: Arial, sans-serif;
   font-style: italic;
 }
 .start {
@@ -176,6 +178,18 @@ main {
 .start button {
   background-color: #e6194b;
   color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  padding: 16px;
+  transition: background-color 0.5s ease-in-out;
+  box-shadow: 0px 3px 6px rgba(255, 0, 0, 0.5);
+  width: 100%;
+}
+
+.start:hover button {
+  filter: brightness(110%);
+  transition: filter 0.5s ease-in-out;
 }
 
 
@@ -219,6 +233,14 @@ main {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.score-container {
+  display: flex;
+  font-size: 24px;
+  color: #00a6ed;
+  transition: ;
+
+}
+
 .answer-button:hover {
   background-color: #00a6ed;
 }
@@ -238,5 +260,7 @@ main {
   /* Ajusta o layout para desktop */
  .container-header .container-main {
   max-width: 100%; /* para acionar o tamanho máximo disponivel em diferentes telas*/
+  }
 }
-}
+
+@keyframes
