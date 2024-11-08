@@ -166,11 +166,11 @@ document.addEventListener('DOMContentLoaded', () => {
       questionContainer.classList.add('hide')
       answerContainer.classList.add('hide')
       if (score >= 25000) {
-        scoreContainer.innerText = 'Parabéns, ' + nickName + '! Sua pontuação foi' + score + '.'
+        scoreContainer.innerText = 'Parabéns, ' + nickName + '! Sua pontuação foi ' + score + '.'
       } else if (score >= 15000) {
-        scoreContainer.innerText = 'Você conseguiu, ' + nickName + '! Sua pontuação foi' + score + '.'
+        scoreContainer.innerText = 'Você conseguiu, ' + nickName + '! Sua pontuação foi ' + score + '.'
       } else {
-        scoreContainer.innerText = 'Que pena, ' + nickName + '! Sua pontuação foi' + score + '.'
+        scoreContainer.innerText = 'Que pena, ' + nickName + '! Sua pontuação foi ' + score + '.'
       }
       scoreContainer.classList.remove('hide')
 
