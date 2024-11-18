@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let nickName
   let questions = [];
   let currentQuestionIndex = 0;
-  let score = 30000
+  let score = 100000
   let timer // armazena o tempo
 
 
@@ -54,13 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
       scoreContainer.classList.add('hide')
       restartButton.classList.add('hide')
     } else {
-      alert('Insira um novo nickname')
-
       nickNameContainer.classList.remove('hide')
       advanceButton.classList.remove('hide')
       restartButton.classList.add('hide')
       scoreContainer.classList.add('hide')
-      let selectedGenre = null
     }
   })
 
@@ -140,18 +137,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Iniciar o Timer
     function startScoreTimer() {
+      let startTime = Date.now()
+
       timer = setInterval(() => {
-        score -= 100
+        const elapsedTime = Date.now() - startTime
+        score -= elapsedTime * 0.010
         if (score <= 0) {
           score = 0
           clearInterval(timer)
           alert('tempo esgotado!')
           resetGame()
-          nextQuestion()
+          endQuiz()
         }
 
-        scoreContainer.innerText = 'Score:' + score
+        scoreContainer.innerText = 'Score:' + Math.round(score)
       }, 100)
+
     }
 
     function selectAnswer(selectedOption) {
@@ -160,10 +161,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const correctAnswer = questions[currentQuestionIndex].resposta
 
       if (selectedOption === correctAnswer) {
-        score += 3000
+        score += 5000
         console.log('Resposta correta!')
       } else {
-        score -= 5000
+        score -= 7000
         console.log('Resposta errada!')
       }
 
@@ -186,11 +187,11 @@ document.addEventListener('DOMContentLoaded', () => {
       questionContainer.classList.add('hide')
       answerContainer.classList.add('hide')
       if (score >= 25000) {
-        scoreContainer.innerText = 'Parabéns, ' + nickName + '! Sua pontuação foi ' + score + '.'
+        scoreContainer.innerText = 'Parabéns, ' + nickName + '! Sua pontuação foi ' + Math.round(score) + '.'
       } else if (score >= 15000) {
-        scoreContainer.innerText = 'Você conseguiu, ' + nickName + '! Sua pontuação foi ' + score + '.'
+        scoreContainer.innerText = 'Você conseguiu, ' + nickName + '! Sua pontuação foi ' + Math.round(score) + '.'
       } else {
-        scoreContainer.innerText = 'Que pena, ' + nickName + '! Sua pontuação foi ' + score + '.'
+        scoreContainer.innerText = 'Que pena, ' + nickName + '! Sua pontuação foi ' + Math.round(score) + '.'
       }
       scoreContainer.classList.remove('hide')
       restartButton.classList.remove('hide')
@@ -199,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function resetGame() {
-      score = 30000
+      score = 100000
       currentQuestionIndex = 0
       selectedGenre = null
       questions = []
