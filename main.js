@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const advanceButton = document.querySelector('.enter-button')
   const scoreContainer = document.querySelector('.score-container')
   const genreButtons = document.querySelectorAll('.genre-button')
+  const restartButton = document.querySelector('.restart-game')
   let selectedGenre = null
   let nickName
   let questions = [];
@@ -43,7 +44,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 
+  // restart game
+  restartButton.addEventListener('click', () => {
+    const sameNickName = confirm('Deseja jogar novamente com o mesmo nickName?')
 
+    if (sameNickName) {
+      // alert(`Jogo reiniciado com o nickname: ${nickName}`)
+      genreButtonsContainer.classList.remove('hide')
+      scoreContainer.classList.add('hide')
+      restartButton.classList.add('hide')
+    } else {
+      alert('Insira um novo nickname')
+
+      nickNameContainer.classList.remove('hide')
+      advanceButton.classList.remove('hide')
+      restartButton.classList.add('hide')
+      scoreContainer.classList.add('hide')
+      let selectedGenre = null
+    }
+  })
 
   genreButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -127,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
           score = 0
           clearInterval(timer)
           alert('tempo esgotado!')
+          resetGame()
           nextQuestion()
         }
 
@@ -173,9 +193,17 @@ document.addEventListener('DOMContentLoaded', () => {
         scoreContainer.innerText = 'Que pena, ' + nickName + '! Sua pontuação foi ' + score + '.'
       }
       scoreContainer.classList.remove('hide')
+      restartButton.classList.remove('hide')
 
-      startButton.classList.remove('hide')
-      startButton.innerText = 'Jogar Novamente'
+      resetGame()
+    }
+
+    function resetGame() {
+      score = 30000
+      currentQuestionIndex = 0
+      selectedGenre = null
+      questions = []
+      timer = null
     }
   }
 })
