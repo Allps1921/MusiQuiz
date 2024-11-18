@@ -12,9 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let nickName
   let questions = [];
   let currentQuestionIndex = 0;
-  let score = 100000
+  let score = 50000
   let timer // armazena o tempo
-
+  let correctAnswers = 0
+  let wrongAnswers = 0
+  let correctPoints = 6500
+  let wrongPoints = 7000
 
   // start game
   startButton.addEventListener('click', () => {
@@ -161,15 +164,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const correctAnswer = questions[currentQuestionIndex].resposta
 
       if (selectedOption === correctAnswer) {
-        score += 5000
+        score += correctPoints
         console.log('Resposta correta!')
+        correctAnswers++
       } else {
-        score -= 7000
+        score -= wrongPoints
         console.log('Resposta errada!')
+        wrongAnswers++
       }
 
       nextQuestion()
-      console.log(score)
     }
 
     function nextQuestion() {
@@ -186,12 +190,16 @@ document.addEventListener('DOMContentLoaded', () => {
       clearTimeout(timer)
       questionContainer.classList.add('hide')
       answerContainer.classList.add('hide')
-      if (score >= 25000) {
-        scoreContainer.innerText = 'Parabéns, ' + nickName + '! Sua pontuação foi ' + Math.round(score) + '.'
-      } else if (score >= 15000) {
-        scoreContainer.innerText = 'Você conseguiu, ' + nickName + '! Sua pontuação foi ' + Math.round(score) + '.'
+
+      // calcula total de perguntas respondidas
+      let totalAnswers = correctAnswers + wrongAnswers
+
+      if (score >= 90000) {
+        scoreContainer.innerText = 'Parabéns, ' + nickName + '! Acertou ' + correctAnswers + ' de ' + totalAnswers + '! Sua pontuação foi ' + Math.round(score) + '.'
+      } else if (score >= 35000) {
+        scoreContainer.innerText = 'Você conseguiu, ' + nickName + '! Acertou ' + correctAnswers + ' de ' + totalAnswers + '! Sua pontuação foi ' + Math.round(score) + '.'
       } else {
-        scoreContainer.innerText = 'Que pena, ' + nickName + '! Sua pontuação foi ' + Math.round(score) + '.'
+        scoreContainer.innerText = 'Que pena, ' + nickName + '! Acertou ' + correctAnswers + ' de ' + totalAnswers + '! Sua pontuação foi ' + Math.round(score) + '.'
       }
       scoreContainer.classList.remove('hide')
       restartButton.classList.remove('hide')
@@ -200,11 +208,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function resetGame() {
-      score = 100000
+      score = 50000
       currentQuestionIndex = 0
       selectedGenre = null
       questions = []
       timer = null
+      correctAnswers = 0
+      wrongAnswers = 0
     }
   }
 })
